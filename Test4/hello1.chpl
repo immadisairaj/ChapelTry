@@ -1,0 +1,10 @@
+// use IO;
+// var myFile = open("input", iomode.r);
+// var readingChannel = myFile.reader();
+var x: string;
+// write(5);
+// readln(x);
+// writeln(x);
+var s:string = "My favorite %s is %i".format("number", 7);
+writeln(s);
+// stdout.writeln(x);

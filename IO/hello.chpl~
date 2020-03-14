@@ -1,0 +1,43 @@
+use IO;
+// use Time;
+
+// var t: Timer;
+// var rt: Timer;
+// var wt: Timer;
+// t.start();
+// rt.start();
+var myFile = open("input", iomode.cw);
+var myWritingChannel = myFile.writer();
+var x: int = 10;
+myWritingChannel.write(x);
+myWritingChannel.flush();
+myFile = open("input", iomode.r);
+var myReadingChannel = myFile.reader();
+var y: int;
+myReadingChannel.read(y);
+writeln(y);
+myWritingChannel.close();
+myReadingChannel.close();
+myFile.close();
+
+var k: int;
+readf("%i", k);
+var a: int = k.stringStyleWithVariableLength();
+writeln(a);
+var b: int = stringStyleExactLen(6);
+writeln(b);
+// rt.stop();
+
+// wt.start();
+// myFile = open("input", iomode.r);
+// var myReadingChannel = myFile.reader();
+// var y: int;
+// var readSomething = myReadingChannel.read(y);
+// writeln("Read Integer: ", y);
+// myReadingChannel.close();
+// myFile.close();
+// wt.stop();
+// t.stop();
+// writeln("Read Time Elapsed: ", rt.elapsed(TimeUnits.milliseconds));
+// writeln("Write Time Elapsed: ", wt.elapsed(TimeUnits.milliseconds));
+// writeln("Time Elapsed: ", t.elapsed(TimeUnits.milliseconds));
