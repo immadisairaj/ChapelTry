@@ -2,16 +2,13 @@
 #include <time.h>
 
 int main() {
+	//setbuf(stdout, NULL);
     int num = 10000000;
     clock_t start, end;
-    FILE *filePointer = fopen("writec", "w");
     start = clock();
     for(int i=1; i<=num; i++)
-    	fprintf(filePointer, "%d\n", i);
-    //fflush(filePointer);
-    fclose(filePointer);
+    	printf("%d\n", i);
     end = clock();
-    //fclose(filePointer);
     float time = (float) (end-start)/CLOCKS_PER_SEC;
-    printf("Time writing %d into file: %f\n", num, time);
+    printf("Time writing %d into stdout: %f\n", num, time);
 }
