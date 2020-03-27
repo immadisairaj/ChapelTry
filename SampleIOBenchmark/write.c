@@ -2,12 +2,13 @@
 #include <time.h>
 
 int main() {
-    int num = 10000000;
+    int num = 1000000000;
     clock_t start, end;
     FILE *filePointer = fopen("writec", "w");
+    int d = 1;
     start = clock();
     for(int i=1; i<=num; i++)
-    	fprintf(filePointer, "%d\n", i);
+    	fprintf(filePointer, "%d\n", d);
     //fflush(filePointer);
     fclose(filePointer);
     end = clock();
